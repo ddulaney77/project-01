@@ -1,213 +1,100 @@
-/* Global Layout Set-up */
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  color: #222;
-  background: #f7f5f0;
+margin: 0;
+padding: 0;
+font-family: fantasy;
 }
-/* Link Styles */
 
-a {
+.funny-cat {
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.funny-cat:hover {
+transform: scale(1.2) rotate(60deg);
+}
+
+header {
+  width: 80%;
+  margin: 0 auto;
+  color: firebrick;
+  font-size: 22px;
+  text-align: center;
+  background-color: #f3CD7B;
+  line-height: 50px;
+  padding:10px;
+  text-shadow: 4px 3px 5px slategrey;
+  box-shadow: 5px 3px 6px grey;
+}
+
+.main-nav a {
+  display: block;
   text-decoration: none;
-  color: orange;
+  color: white;
 }
 a:hover {
-  color: #6633ff;
+  color:firebrick;
+}
+.main-nav ul li {
+background-color: orange;
+border-radius: 5px;
+display: inline-block;
+padding:6px 12px;
+margin-left:30px;
 }
 
-/* Section Styles */
-
-.main-nav {
-  width: 100%;
-  background: black;
-  min-height: 30px;
-  padding: 10px;
-  position: fixed;
-  text-align: center;
-}
-.nav {
-  display: flex;
-  justify-content: space-around;
-  font-weight: 700;
-  list-style-type: none;
-  margin: 0 auto;
-  padding: 0;
+h2 {
+color: orange;
 }
 
-.nav .name {
-    display: block;
-    margin-right: auto;
-    color: orange;
+h2:hover  {
+  color:firebrick;
 }
-.nav li {
-  padding: 5px 10px 10px 10px;
-  color: orange;
-}
-.nav a {
-  transition: all .5s;
-}
-.nav a:hover {
+
+ .second-container ul li {
   color: white;
-}
-
-header {
-  text-align: center;
-  background: url("photos/modesto_arch.jpg") no-repeat top center;
-  background-size: cover;
-  overflow: hidden;
-  padding-top: 110px;
-}
-header {
-  line-height: 1.5;
-}
-header .profile-image {
-  margin-top: 50px;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 3px solid white;
-  transition: all .5s;
-}
-header .profile-image:hover {
-  transform: scale(1.2) rotate(360deg);
-}
-
-.tag {
-  background-color: black;
-  color: aqua;
-  padding: 10px;
-  border-radius: 5px;
-  display: table;
-  margin: 10px auto;
-}
-.location {
-  background-color: #222;
-  color: yellow;
-}
-.card {
+  padding: 5px;
   margin: 10px;
-  padding: 20px 40px 40px;
-  max-width: 500px;
-  text-align: center;
-  background: #fff;
-  border: 1px solid orange;
-  border-radius: 0 50px 0 50px;
-  transition: all .5s;
-}
-.card:hover {
-  background-color: #f3f3f3;
-}
-
-ul.skills {
-  padding: 0;
-  text-align: center;
-}
-
-.skills li {
-  border-radius:  0 10px 0 10px;
   display: inline-block;
-  background: #ff9904;
-  color: white;
-  padding: 5px 10px;
-  margin: 2px;
+  border-radius: 12px;
+  background-color: #3f7fb8;
 }
 
-.skills li:nth-child(odd) {
-  background: #0399ff;
+.second-container ul li:hover {
+  color: black;
 }
 
-.skills li:hover {
-color: black;
+.container  {
+  width:80%;
+  margin: 0 auto;
+  text-align:center;
+  font-size: 18px;
+  border-top:2px solid slategrey;
+  border-bottom: 2px solid slategrey;
 }
 
-.skills li:nth-child(odd):hover {
-  color:black;
-}
-
-.social-github {
+.second-container {
+width: 80%;
+margin: 0 auto;
 background-color: lightblue;
-}
-footer {
-  width: 100%;
-  min-height: 30px;
-  padding: 20px 0 40px 20px;
+text-align: center;
+padding: 10px;
 }
 
-footer .copyright {
-  top: -8px;
-  font-size: .75em;
+.beach {
+  float: left;
+  margin: 20px;
+  border: 5px solid white;
+
 }
 
-footer ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-footer ul li {
-  display: inline-block;
-}
-
-a.social {
-  display: inline-block;
-  text-indent: -9999px;
-  margin-left: 5px;
-  width: 30px;
-  height: 30px;
-  background-size: 30px 30px;
-  opacity: .4;
-  transition: all .5s;
-}
-a.github {
-  background-image: url(images/github.svg);
-}
-a.social:hover {
-  opacity: 1;
-}
-.clearfix {
-  clear: both;
-}
-
-/* Styles for larger screens */
-@media screen and (min-width: 720px) {
-
-  .flex {
-      display: -ms-flexbox;      /* TWEENER - IE 10 */
-      display: flex;
-      max-width: 1200px;
-      -ms-flex-pack: distribute;
-      justify-content: space-around;
-      margin: 0 auto;
-  }
-
-  header {
-    min-height: 470px;
-  }
-
-  .nav {
-    max-width: 1200px;
-    padding: 0 30px;
-  }
-
-
-  main {
-    padding-top: 20px;
-  }
-
-  main p {
-    line-height: 1.6em;
-  }
-
-  footer {
-    font-size: 1.3em;
-    max-width: 1200px;
-    margin: 40px auto;
-  }
+.clearfix::after {
+ content: "";
+ display: table;
+ clear: both;
 
 }
